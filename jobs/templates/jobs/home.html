@@ -2,30 +2,20 @@
     <!doctype html>
     <html lang="en">
     <head>
+     {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.0.1">
-    <title>Album example · Bootstrap</title>
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <title>Shreya Vhadadi</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-    <!-- Bootstrap core CSS -->
+        <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
-    <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#563d7c">
-
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"-->
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -46,6 +36,20 @@
       padding-bottom:10px
       }
 
+      .main-logo,
+      .main-nav,
+      .main-nav li{
+       display:inline;
+       padding: 5px 5px;
+       border-radius:5px;
+        }
+    }
+}
+    h1 {
+   display:inline;
+   width:200px;
+   text-align:center;
+}
     </style>
     <!-- Custom styles for this template -->
 
@@ -53,19 +57,19 @@
     <body>
     <header>
     <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #6C0C03">
-    <a class="navbar-brand" href="#">𝒮𝓥</a>
+    <a class="navbar-brand" href="{% url 'home'%}">𝒮𝓥</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <!--span class="navbar-toggler-icon"></span-->
+    <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link" href="#">Home</a>
-      <a class="nav-item nav-link" href="#">Linkedin</a>
-      <a class="nav-item nav-link" href="#">Github</a>
-      <a class="nav-item nav-link" href="#">Instagram</a>
-      <a class="nav-item nav-link" href="#">Facebook</a>
-      <a class="nav-item nav-link" href="#">Resume</a>
-
+      <!--a class="nav-item nav-link" href="#">Home</a-->
+      <a class="nav-item nav-link" href="https://www.linkedin.com/in/shreya-vhadadi-20a13011a/"><i class="fab fa-linkedin" style="font-size:40px"></i></a>
+      <a class="nav-item nav-link" href="#"><i class="fa fa-github-square" style="font-size:40px"></i></a>
+      <a class="nav-item nav-link" href="#"><i class="fab fa-instagram" style="font-size:40px"></i></a>
+      <a class="nav-item nav-link" href="#"><i class="fab fa-facebook-square" style="font-size:40px"></i></a>
+      <!--a href="{% static 'Shreya Vhadadi_Resume_CF.pdf'%}"></a><i class="far fa-file-alt" style="font-size:45px;color:white"></i-->
+      <!--a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a-->
     </div>
     </div>
     </nav>
@@ -75,22 +79,31 @@
 
     <section class="jumbotron text-center" style="background: radial-gradient(circle, rgba(129,6,6,1) 0%, rgba(45,3,3,1) 100%)">
     <div class="container">
-      <h1 style="color:black">Shreya Vhadadi</h1>
+      <h1 style="color:white">Shreya Vhadadi</h1>
+      <img src="{% static 'Shreya pic.jpeg' %}"class="img-responsive img-circle margin" height="280" width="200"/>
       <p style="color:white">This portfolio is a compilation of the written works I completed in English 131 during the 2012 fall quarter, all of which support my definite comprehension and execution of the course outcomes. Consisting of four short papers and two major papers, my portfolio explores the new techniques I have learned as a college student writer, the themes of culture and language, and the four main outcomes of English 131. Over the course of ten weeks, the professionalism and effectiveness of my writing developed into that of a college student. Transitioning from high school to college level writing is a challenge that is ongoing as a student expands there knowledge of writing tactics, writes on different topics and themes, and reflects on their writing consistently. English 131 was the perfect opportunity to begin such a transition smoothly and create a sturdy foundation for the college writing experience I will build on throughout my student career</p>
-      <p>
-        <a href="mailto:svhadadi@stevens.edu" class="btn btn-primary my-2">Email</a>
-      </p>
+        <ul class="main-nav">
+        <li><a href="mailto:svhadadi@stevens.edu"><i class="fa fa-envelope-o" style="font-size:35px;color:white"></i></li>
+        <li><a href="{% static 'Shreya Vhadadi_Resume_CF.pdf'%}"></a><i class="far fa-file-alt" style="font-size:37px;color:white"></i></li>
+        </ul>
     </div>
     </section>
 
-    <div class="album py-5 bg-light">
+
+    <section class="jumbotron text-center" style="background: radial-gradient(circle, rgba(129,6,6,1) 0%, rgba(45,3,3,1) 100%)">
+    <div class="container" style="background-color: #6C0C03">
+        <h1>Projects</h1>
+        <br/>
+        <br/>
+
+    <!--div class="album py-5 bg-light"-->
     <div class="container" style="background-color: #6C0C03">
 
       <div class="row">
         {% for job in jobs.all %}
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{{ job.image.url }}" </img>
+            <img class="card-img-top" src="{{ job.image.url }}"/>
             <div class="card-body">
               <p class="card-text" style="color:red">{{ job.summary }}</p>
               </div>
@@ -101,13 +114,91 @@
 
       </div>
     </div>
+
+
     </div>
+    </section>
+
+    <section class="jumbotron text-center" style="background: radial-gradient(circle, rgba(129,6,6,1) 0%, rgba(45,3,3,1) 100%)">
+    <div class="container">
+        <h1>Skills</h1>
+    </div>
+    </section>
+
+    <section class="jumbotron text-center" style="background: radial-gradient(circle, rgba(129,6,6,1) 0%, rgba(45,3,3,1) 100%)">
+    <div class="container">
+        <h1>Experience</h1>
+    </div>
+    </section>
+
+
+
+    <section class="jumbotron text-center" style="background: radial-gradient(circle, rgba(129,6,6,1) 0%, rgba(45,3,3,1) 100%)">
+    <div class="container">
+        <h1>Education</h1>
+    </div>
+    </section>
+
+    <section class="jumbotron text-center" style="background: radial-gradient(circle, rgba(129,6,6,1) 0%, rgba(45,3,3,1) 100%)">
+    <div class="container">
+        <!--h1>Contact</h1-->
+        <h1>Contact</h1>
+    <p>Lets talk!</p>
+
+  <!--div class="row">
+      <img src="/w3images/map.jpg" style="width:100%">
+    </div-->
+    <!--div class="column"-->
+      <!--form action="/action_page.php">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name.." ><br><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Your email.."><br><br>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="email" placeholder="Your subject.."><br><br>
+        <label for="message">Message</label><br><br>
+
+        <textarea id="message" name="message" placeholder="Write something.." style="height:170px;width:905px;"></textarea><br/>
+        <input type="submit" value="Submit">
+      </form-->
+    <!--/div-->
+
+   <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Enter Name</label>
+      <input type="text" class="form-control" id="inputname" placeholder="Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Enter Email</label>
+      <input type="text" class="form-control" id="inputEmail4" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Enter Subject</label>
+    <input type="text" class="form-control" id="inputSubject" placeholder="Subject">
+  </div>
+  <div class="form-group">
+    <!--label for="inputAddress2">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"-->
+      <label for="exampleFormControlTextarea1">Message</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Message"></textarea></br>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+    </div>
+    </section>
+
 
     <!/main>
 
-    <footer class="text-muted">
+    <footer class="text-muted" >
     <div class="container text-center">
-        <p>ⓒ Shreya Vhadadi {% now "Y"%}</p>
+        </br>
+        <p>Designed & Developed by</p>
+        <p>Shreya Vhadadi</p>
+        <p class="small">ⓒ Shreya Vhadadi {% now "Y"%}. All Rights Reserved.</p>
+
     </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -115,3 +206,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </body>
     </html>
+
+
+
+
+
