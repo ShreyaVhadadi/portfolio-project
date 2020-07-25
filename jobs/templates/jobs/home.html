@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <!--link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"-->
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -43,26 +44,31 @@
        padding: 5px 5px;
        border-radius:5px;
         }
-.vertical-menu {
-  width: 100px;
-}
 
-.vertical-menu a {
-  background-color: #eee;
-  color: black;
-  display: block;
-  padding: 12px;
-  text-decoration: none;
+        html {
+      position: relative;
+      min-height: 100%;
 }
+.Sidebar {
+          position: fixed;
+          background-color: #15191C;
+          width: 90px;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          overflow-y: auto;
+          z-index: 999;
+          -webkit-transition: left 300ms;
+          -o-transition: left 300ms;
+          transition: left 300ms;
+         }
+ .Sidebar-Icon .SDIcon {
+                        color: #fff;
+                       }
+ .Sidebar-Icon li {
+                   list-style-type: none;
+                   padding-bottom:10px;
 
-.vertical-menu a:hover {
-  background-color: #ccc;
-}
-
-.vertical-menu a.active {
-  background-color: #4CAF50;
-  color: white;
-}
 
  </style>
     <!-- Custom styles for this template -->
@@ -90,28 +96,40 @@
     </header>
 
     <!--div class="w3-sidebar w3-bar-block w3-black w3-xxlarge" style="width:500px">
-  <a href="#" class="w3-bar-item w3-button" style="color:red"></a>
+  <a href="#" class="w3-bar-item w3-button" style="color:red">Hi</a>
   <a href="#" class="w3-bar-item w3-button"></a>
   <a href="#" class="w3-bar-item w3-button"></a>
   <a href="#" class="w3-bar-item w3-button"></i></a>
-  <a href="#" class="w3-bar-item w3-button"></i></a>
+  <a href="#" class="w3-bar-item w3-button">Hi</a>
+</div-->
+<div class="Sidebar">
+  <ul class="Sidebar-Icon">
+   <li><a href="#" <i class="fa fa-home SDIcon" aria-hidden="true"></i></a></li>
+   <li><a href="#" <i class="fa fa-square-o SDIcon" aria-hidden="true"></i></a></li>
+  <li><a href="#" <i class="fa fa-cloud SDIcon" aria-hidden="true"></i></a></li>
+  <li><a href="#" <i class="fa fa-circle-o SDIcon" aria-hidden="true"></i></a></li>
+  <li><a href="#" <i class="fas fa-home" aria-hidden="true"></i></a></li>
+ </ul>
 </div>
 
-<div style="margin-left:70px"-->
+<div style="margin-left:70px">
 
-<div class="wrapper">
-  <a href="#" class="active">Home</a>
-  <a href="#">Link 1</a>
-  <a href="#">Link 2</a>
-  <a href="#">Link 3</a>
-  <a href="#">Link 4</a>
-</div>
+<!--div class="wrapper">
+    <div class="sidebar"
+        <ul>
+          <li><a href="#" class="fas fa-home" style="color:red"></a>Home</li>
+          <li><a href="#" class="fas fa-home" style="color:red"></a></li>
+          <li><a href="#" class="fas fa-home" style="color:red"></a></li>
+          <li><a href="#" class="fas fa-home" style="color:red"></a>Contact</li>
+        </ul>
+    </div>
+</div-->
 
 
 
     <!main role="main">
 <!--Home-->
-    <section class="jumbotron text-center" style="">
+    <section class="jumbotron text-center" style="background-color:white">
     <div class="container">
       </br>
       </br>
@@ -158,6 +176,8 @@
     <section class="jumbotron text-center" style="background:white">
     <div class="container text-center">
         <h1>Skills</h1>
+            <br/>
+            <br/>
             <div class="row">
               <!--div class="col-sm-5">Python</div-->
                <p style="font-size:70px"><pre>               </pre>Java</p>
@@ -235,7 +255,7 @@
 
     <section class="jumbotron text-center" style="background: radial-gradient(circle, rgba(129,6,6,1) 0%, rgba(45,3,3,1) 100%)">
     <div class="container">
-        <h1>Experience</h1>
+        <h1 style="color:white">Experience</h1>
         <div class="card text-center">
           <div class="card-header">
            Featured
@@ -245,15 +265,10 @@
           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
           <a href="#!" class="btn btn-primary">Go somewhere</a>
           </div>
-        <div class="card-footer text-muted">
-         2 days ago
+          <div class="card-footer text-muted">
+          2 days ago
+          </div>
         </div>
-    </div>
-
-
-
-
-
     </div>
     </section>
 
@@ -261,8 +276,9 @@
 
     <section class="jumbotron text-center" style="background: radial-gradient(circle, rgba(129,6,6,1) 0%, rgba(45,3,3,1) 100%)">
     <div class="container">
-        <h1>Education</h1>
-
+        <h1 style="color:white">Education</h1>
+        <br/>
+        <br/>
 <div class="row">
   <div class="col-sm-6">
     <div class="card">
@@ -333,6 +349,7 @@
 
     <footer class="text-muted" style="background: radial-gradient(circle, rgba(129,6,6,1) 0%, rgba(45,3,3,1) 100%)">
     <div class="container text-center">
+
         </br>
         <p style="color:white">Designed & Developed by</p>
         <p style="color:white">Shreya Vhadadi</p>
