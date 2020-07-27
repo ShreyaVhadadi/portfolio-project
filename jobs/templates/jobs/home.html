@@ -15,7 +15,7 @@
         <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <!--link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"-->
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <style>
        body{
@@ -27,17 +27,13 @@
        scroll-behaviour:smooth;
        scroll-snap-type:y mandatory;
        }
-textarea {
-  width: 100%;
-  height: 150px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-  resize: vertical;
-}
+       .form{
+       margin: 25px 50px 75px 100px;
+       }
+     .education{
+margin: 25px 50px 75px 100px;
+       }
+
 
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -52,6 +48,7 @@ textarea {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
+
       }
       .navbar{
       position:fixed;
@@ -103,12 +100,6 @@ html{
 scroll-behavior:smooth;
 }
 
-
-#Home {height:500px;}
-#Projects {padding-top:50px;height:500px;}
-#Skills {padding-top:50px;height:500px;}
-#Education {padding-top:50px;height:500px;}
-#Skills {padding-top:50px;height:500px;}
 
  </style>
     <!-- Custom styles for this template -->
@@ -306,7 +297,8 @@ scroll-behavior:smooth;
         <br/>
         <h1 style="color:white">Experience</h1>
         <div class="row">
-        <div class="card mb-10 shadow-sm">
+        <div class="col-md-13">
+        <div class="card mb-15">
 
           <div class="card-body">
           <h5 class="card-title">Special title treatment</h5>
@@ -329,18 +321,19 @@ scroll-behavior:smooth;
 
 
     <section class="jumbotron text-center" style="background: radial-gradient(circle, rgba(129,6,6,1) 0%, rgba(45,3,3,1) 100%)" id="Education">
-    <div class="container text centre" >
+    <div class="container" >
         <br/>
         <br/>
         <h1 style="color:white">Education</h1>
         <br/>
         <br/>
+        <div class="education">
 <div class="row">
-  <div class="col-sm-6">
+    <div class="col-sm-6">
     <div class="card">
         <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap" height="300" width="200">
       <div class="card-body">
-        <h3><a href="#">Stevens Institute of Technology</a></h3>
+        <h4><a href="#">Stevens Institute of Technology</a></h4>
         <p class="small">1 Castle Point Terrace, Hoboken, NJ 07030, 1USA</p>
         <h5 class="card-title">Master of Computer Science (MS)</h5>
         <p class="card-text">GPA</p>
@@ -352,7 +345,7 @@ scroll-behavior:smooth;
     <div class="card">
         <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap" height="300" width="200">
       <div class="card-body">
-          <h3><a href="#">SIES Graduate School of Technology</a></h3>
+          <h4><a href="#">SIES Graduate School of Technology</a></h4>
           <p class="small">Nerul, Navi Mumbai, Maharashtra 400706, India</p>
         <h5 class="card-title">Bachelor of Computer Engineering (B.E)</h5>
         <p class="card-text">GPA</p>
@@ -361,7 +354,7 @@ scroll-behavior:smooth;
     </div>
   </div>
   </div>
-
+</div>
 </div>
     </section>
 
@@ -374,33 +367,32 @@ scroll-behavior:smooth;
         <h1>Contact</h1>
     <p>Lets talk!</p>
 
-   <form>
+   <form class="form">
   <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="form-group col-sm-6">
       <label for="inputname"></label>
       <input type="text" class="form-control" id="inputname" placeholder="Name">
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-sm-6">
       <label for="inputEmail4"></label>
       <input type="text" class="form-control" id="inputEmail4" placeholder="Email">
     </div>
   </div>
-  <div class="form-group">
+  <div class="form-group col-sm-13">
     <label for="inputSubject"></label>
     <input type="text" class="form-control" id="inputSubject" placeholder="Subject">
   </div>
-  <div class="form-group">
+  <div class="form-group col-sm-13">
     <!--label for="inputAddress2">Address 2</label>
     <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"-->
       <label for="exampleFormControlTextarea1"></label>
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Message"></textarea></br>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+   </form>
     </div>
-    </section>
+</section>
 
-    </section>
 
 
     <!/main>
