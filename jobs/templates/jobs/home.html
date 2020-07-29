@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
        body{
        line-height:1.6;
@@ -309,28 +309,55 @@ scroll-behavior:smooth;
     <div class="container-fluid" >
         <br/>
         <br/>
-        <div class="row">
-        <div class="col-md-12">
          <h1 style="color:white">Experience</h1>
+
          <hr style="width:50px" color="black">
         <div class="card mb-20">
-
           <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#!" class="btn btn-primary">Go somewhere</a>
-           <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#!" class="btn btn-primary">Go somewhere</a>
+              <div class ="row">
+
+                 <div class="col-sm-3">
+                  <a href="#"><img src="{% static 'Shreya pic.jpeg' %}" alt="Card image cap" height="190" max-width="190"></a>
+                 </div>
+                  <!--a href="#!" class="btn btn-primary">Go somewhere</a-->
+                 <div class="col-sm-8">
+                  <h4 class="card-title">Software Engineer Intern</h4>
+                  <p class="small">June 2020 - present</p>
+                  <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content With supporting text below as a natural lead-in to additional content</i></p>
+                  <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content</i></p>
+                  <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content</i></p>
+                  </div>
+              </div>
+          <hr>
+          <!--a href="#!" class="btn btn-primary">Go somewhere</a>
+          <h4 class="card-title">Software Engineer Intern</h4>
+          <p class="small">June 2020 - present</p>
+          <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content</i></p>
+          <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content</i></p>
+              <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content</i></p-->
+              <div class ="row">
+
+                 <div class="col-sm-3">
+                  <a href="#"><img src="{% static 'Shreya pic.jpeg' %}" alt="Card image cap" height="190" max-width="190"></a>
+                 </div>
+                  <!--a href="#!" class="btn btn-primary">Go somewhere</a-->
+                 <div class="col-sm-8">
+                  <h4 class="card-title">Software Engineer Intern</h4>
+                  <p class="small">June 2020 - present</p>
+                  <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content With supporting text below as a natural lead-in to additional content </i></p>
+                  <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content With supporting text below as a natural lead-in to </i></p>
+                  <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content..</i></p>
+                  </div>
+              </div>
 
           </div>
 
 
          </div>
         </div>
-        </div>
 
-    </div>
+
+
     </section>
 
 
@@ -349,7 +376,7 @@ scroll-behavior:smooth;
     <div class="card">
         <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap" height="300" width="200">
       <div class="card-body">
-        <h5><a href="https://www.stevens.edu/">Stevens Institute of Technology</a></h5>
+        <h5><a href="https://www.stevens.edu/" style="color:black">Stevens Institute of Technology</a></h5>
         <p class="small">2019-present</p>
         <h6 class="card-title">Master of Computer Science (MS)</h6>
         <p class="small">Courses: Web Programming, Machine Learning,Knowledge Discovery & Data Mining</p>
@@ -361,7 +388,7 @@ scroll-behavior:smooth;
     <div class="card">
         <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap" height="300" width="200">
       <div class="card-body">
-          <h5><a href="#">SIES Graduate School of Technology</a></h5>
+          <h5><a href="http://www.siesgst.edu.in/" style="color:black">SIES Graduate School of Technology</a></h5>
           <p class="small">2012-2016</p>
         <h6 class="card-title">Bachelor of Information Technology(B.E)</h6>
         <p class="small">Courses: Data Structures, Software Engineering,Database Management System</p>
@@ -384,7 +411,9 @@ scroll-behavior:smooth;
         <hr style="width:40px">
     <p>Lets talk!</p>
 
-   <form class="form">
+   <form method="post">
+       {% csrf_token %}
+       {{ form.as_p }}
   <div class="form-row">
     <div class="form-group col-sm-6">
       <label for="inputname"></label>
