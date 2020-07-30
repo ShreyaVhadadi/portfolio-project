@@ -49,19 +49,31 @@ margin: 25px 25px 75px 25px;
 }
 
 .flip-card:hover .flip-card-inner {
-  transform: rotateX(180deg);
+  transform: rotateX(-180deg);
 }
 .flip-card-front, .flip-card-back {
   backface-visibility: hidden;
 }
 .flip-card-back {
   color: white;
-  transform: rotateX(-180deg);
+  transform: rotateX(180deg);
   text-align: center;
   padding-top:50px;
 }
-
-
+.button1{
+  background-color: white;
+  color: black;
+  border: 1px solid #555555;
+  width: 100px;
+}
+.button1:hover{
+  background-color: #6C0C03;
+  color: white;
+}
+ .form-control:focus {
+        border-color: #6C0C03;
+        box-shadow: 0px 1px 1px rgba(129,6,6,1) inset, 0px 0px 8px rgba(129,6,6,1);
+       }
 
 
       .bd-placeholder-img {
@@ -166,8 +178,8 @@ scroll-behavior:smooth;
 
 <div class="Sidebar">
   <ul class="Sidebar-Icon" id="myNavbar">
-   <li><a href="#"><i class="fa fa-square-o SDIcon" aria-hidden="true" style="color:white"></i></a></li>
-   <li><a href="#Home"><i class="fas fa-home" aria-hidden="true" style="color:white"></i></a></li>
+      <div id=""><li><a href="#"><i class="fa fa-square-o SDIcon" aria-hidden="true" style="color:white"></i></a></li></div>
+      <div><li><a href="#Home"><i class="fas fa-home" aria-hidden="true" style="color:white"></i></a></li></div>
   <li><a href="#Projects"><i class="fas fa-laptop-code" aria-hidden="true" style="color:white"></i></a></li>
   <li><a href="#Skills"><i class="fas fa-tools" aria-hidden="true" style="color:white"></i></a></li>
   <li><a href="#Experience"><i class="fas fa-briefcase" aria-hidden="true" style="color:white"></i></a></li>
@@ -200,7 +212,7 @@ scroll-behavior:smooth;
       <h1 style="color:black">Shreya Vhadadi</h1>
       <hr style="width:50px">
       </br>
-      <img src="{% static 'Shreya pic.jpeg' %}" height="280" width="200"/>
+      <img src="{% static 'Shreya modified pic.jpeg' %}" height="280" width="200"/>
       </br>
       </br>
       <p style="color:black">This portfolio is a compilation of the written works I completed in English 131 during the 2012 fall quarter, all of which support my definite comprehension and execution of the course outcomes. Consisting of four short papers and two major papers, my portfolio explores the new techniques I have learned as a college student writer, the themes of culture and language, and the four main outcomes of English 131. Over the course of ten weeks, the professionalism and effectiveness of my writing developed into that of a college student. Transitioning from high school to college level writing is a challenge that is ongoing as a student expands there knowledge of writing tactics, writes on different topics and themes, and reflects on their writing consistently. English 131 was the perfect opportunity to begin such a transition smoothly and create a sturdy foundation for the college writing experience I will build on throughout my student career</p>
@@ -354,7 +366,7 @@ scroll-behavior:smooth;
               <div class ="row">
 
                  <div class="col-sm-3">
-                  <a href="#"><img src="{% static 'Shreya pic.jpeg' %}" alt="Card image cap" height="190" max-width="190"></a>
+                  <a href=""><img src="{% static 'Whastbusy.jpeg' %}" alt="Card image cap" height="120" max-width="120"></a>
                  </div>
                   <!--a href="#!" class="btn btn-primary">Go somewhere</a-->
                  <div class="col-sm-8">
@@ -375,7 +387,7 @@ scroll-behavior:smooth;
               <div class ="row">
 
                  <div class="col-sm-3">
-                  <a href="#"><img src="{% static 'Shreya pic.jpeg' %}" alt="Card image cap" height="190" max-width="190"></a>
+                  <a href="#"><img src="{% static 'TCS.png' %}" alt="Card image cap" height="110" max-width="110"></a>
                  </div>
                   <!--a href="#!" class="btn btn-primary">Go somewhere</a-->
                  <div class="col-sm-8">
@@ -411,9 +423,9 @@ scroll-behavior:smooth;
 <div class="row">
     <div class="col-sm-6">
     <div class="card">
-        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap" height="300" width="200">
+        <img class="card-img-top" src="{% static 'Stevens.png' %}" alt="Card image cap" height="300" width="200">
       <div class="card-body">
-        <h5><a href="https://www.stevens.edu/" style="color:black">Stevens Institute of Technology</a></h5>
+        <h5><a href="https://www.stevens.edu/" target="_blank" style="color:black">Stevens Institute of Technology</a></h5>
         <p class="small">2019-present</p>
         <h6 class="card-title">Master of Computer Science (MS)</h6>
         <p class="small">Courses: Web Programming, Machine Learning,Knowledge Discovery & Data Mining</p>
@@ -423,9 +435,9 @@ scroll-behavior:smooth;
   </div>
   <div class="col-sm-6">
     <div class="card">
-        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap" height="300" width="200">
+        <img class="card-img-top" src="{% static 'SIESmodi.png' %}" alt="Card image cap" height="300" width="200">
       <div class="card-body">
-          <h5><a href="http://www.siesgst.edu.in/" style="color:black">SIES Graduate School of Technology</a></h5>
+          <h5><a href="http://www.siesgst.edu.in/" target="_blank" style="color:black">SIES Graduate School of Technology</a></h5>
           <p class="small">2012-2016</p>
         <h6 class="card-title">Bachelor of Information Technology(B.E)</h6>
         <p class="small">Courses: Data Structures, Software Engineering,Database Management System</p>
@@ -471,7 +483,8 @@ scroll-behavior:smooth;
       <label for="exampleFormControlTextarea1"></label>
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Message"></textarea></br>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <!--button type="submit" class="btn btn-outline-dark">Submit</button-->
+       <button type="submit" class="button1">Submit</button>
    </form>
     </div>
 </section>
