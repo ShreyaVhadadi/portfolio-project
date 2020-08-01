@@ -16,7 +16,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <style>
        body{
        line-height:1.6;
@@ -48,6 +48,30 @@ margin: 25px 25px 70px 70px;
        .copyright{
        margin: 25px 25px 70px 70px;
        }
+       .A{
+         text-align: left;
+       }
+       .B{
+         text-align: left;
+       }
+       .home h1{
+     color: black;
+  font-family: "arial";
+  text-align:centre;
+  font-size: 3em;
+  margin: 5px 0 0 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  animation: animtext 4s steps(80, end);
+   transition: all cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+@keyframes animtext {
+  from {
+      width: 0;
+     transition: all 2s ease-in-out;
+  }
+}
 
 .card {
   perspective: 1000px;
@@ -310,7 +334,7 @@ scroll-behavior:smooth;
     <section class="jumbotron text-center" style="background:white" id="Skills">
     <div class="container text-center" >
         </br>
-        </br>
+
         <div class="skills">
         <h1>Skills</h1>
         <hr style="width:40px">
@@ -407,12 +431,11 @@ scroll-behavior:smooth;
     <section class="jumbotron text-center" style="background: radial-gradient(circle, rgba(129,6,6,1) 0%, rgba(45,3,3,1) 100%)" id="Experience">
     <div class="container-fluid" >
         <br/>
-        <br/>
         <div class="experience">
          <h1 style="color:white">Experience</h1>
 
          <hr style="width:50px" color="black">
-
+        <br>
         <div class="card mb-10">
           <div class="card-body">
               <div class ="row">
@@ -422,21 +445,15 @@ scroll-behavior:smooth;
                  </div>
                   <!--a href="#!" class="btn btn-primary">Go somewhere</a-->
                  <div class="col-sm-8">
+                     <div class="A">
                   <h4 class="card-title">Software Engineer Intern</h4>
-                  <p class="small">June 2020 - present</p>
-                  <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content With supporting text below as a natural lead-in to additional content</i></p>
-                  <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content</i></p>
-                  <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content</i></p>
+                  <p class="small">Jun 2020 - present</p>
+                  <p><i class="fas fa-long-arrow-alt-right"> Involved in performing code refactoring in Django for Automation</i></p>
+                  <p><i class="fas fa-long-arrow-alt-right"> Collaborated with the core team to ensure quality and performance of the web application along with suggesting business ideas</i></p>
+                     </div>
                   </div>
               </div>
-          <!--hr style="border: 0.5px solid grey;"-->
              <hr>
-          <!--a href="#!" class="btn btn-primary">Go somewhere</a>
-          <h4 class="card-title">Software Engineer Intern</h4>
-          <p class="small">June 2020 - present</p>
-          <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content</i></p>
-          <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content</i></p>
-              <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content</i></p-->
               <div class ="row">
 
                  <div class="col-sm-3">
@@ -444,11 +461,13 @@ scroll-behavior:smooth;
                  </div>
                   <!--a href="#!" class="btn btn-primary">Go somewhere</a-->
                  <div class="col-sm-8">
-                  <h4 class="card-title">Software Engineer Intern</h4>
-                  <p class="small">June 2020 - present</p>
-                  <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content With supporting text below as a natural lead-in to additional content </i></p>
-                  <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content With supporting text below as a natural lead-in to </i></p>
-                  <p><i class="fas fa-long-arrow-alt-right">With supporting text below as a natural lead-in to additional content..</i></p>
+                     <div class="B">
+                  <h4 class="card-title">Systems Engineer</h4>
+                  <p class="small">Jan 2017 - Feb 2019</p>
+                  <p><i class="fas fa-long-arrow-alt-right"> Determined test cases for automation and prepared automation scripts in UFT and Selenium</i></p>
+                  <p><i class="fas fa-long-arrow-alt-right"> Developed methods for repeating steps along with performing regression testing on new software releases</i></p>
+                  <p><i class="fas fa-long-arrow-alt-right"> Created test plans, test cases and test scripts for projects</i></p>
+                     <div class="A">
                   </div>
               </div>
 
@@ -463,8 +482,7 @@ scroll-behavior:smooth;
 
 <!--Education-->
     <section class="jumbotron text-center" style="background: radial-gradient(circle, rgba(129,6,6,1) 0%, rgba(45,3,3,1) 100%)" id="Education">
-    <div class="container" >
-            <br/>
+    <div class="container">
         <br/>
         <div class="education">
         <h1 style="color:white">Education</h1>
@@ -505,7 +523,7 @@ scroll-behavior:smooth;
     <div class="jumbotron text-center" style="background: white" id="Contact">
     <div class="container text-center" >
 
-        <br/>
+
         <br/>
         <div class="contact">
         <!--h1>Contact</h1-->
@@ -513,7 +531,7 @@ scroll-behavior:smooth;
         <hr style="width:40px">
     <p>Lets talk!</p>
 
-   <form method="post">
+   <form method="post" action="">
        {% csrf_token %}
        {{ form.as_p }}
 
@@ -575,6 +593,8 @@ scroll-behavior:smooth;
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!--script type="text/javascript">
 $(document).ready(function() {
