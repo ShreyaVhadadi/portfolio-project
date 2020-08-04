@@ -565,7 +565,7 @@ scroll-behavior:smooth;
         <hr style="width:40px">
     <p>Lets talk!</p>
 
-   <form method="post" action="">
+   <form method="post" action="{% url 'contact' %}">
        {% csrf_token %}
        {{ form.as_p }}
 
@@ -587,7 +587,7 @@ scroll-behavior:smooth;
     <!--label for="inputAddress2">Address 2</label>
     <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"-->
       <label for="exampleFormControlTextarea1"></label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Message"></textarea></br>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" maxlength="200" placeholder="Message"></textarea></br>
   </div>
   <!--button type="submit" class="btn btn-outline-dark">Submit</button-->
        <button type="submit" class="button1">Submit</button>
