@@ -58,6 +58,8 @@
         .form{
             margin: 25px 0px 75px 50px;
         }
+
+
         .education{
             margin: 25px 0px 75px 70px;
         }
@@ -103,6 +105,17 @@
             border-radius: 7px;
             padding:1px;
             border:1px solid #021a40;
+        }
+        .home img:hover{
+            border:2px solid black;
+        }
+
+
+        .home .main-nav a:hover{
+            opacity: 0.5;
+        }
+        .Sidebar-Icon a:hover, .Sidebar-Icon a.active{
+            opacity:0.6;
         }
         .progress:hover{
             outline: 1px solid black;
@@ -196,6 +209,13 @@
             -ms-user-select: none;
             user-select: none;
         }
+        textarea
+        {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
 
         @media (min-width: 600px) {
             .bd-placeholder-img-lg {
@@ -312,7 +332,7 @@
     <div>
         <ul class="Sidebar-Icon"id="myNavbar">
             <li><a href="#"><i class="fa fa-square-o SDIcon" aria-hidden="true" style="color:white"></i></a></li>
-            <li><a href="#Home" class="tooltip-toggle" title="Home"><i class="fas fa-home" aria-hidden="true" style="color:white"></i></a></li>
+            <li><a href="#Home" class="tooltip-toggle" title="Home" onclick="myFunction()"><i class="fas fa-home" aria-hidden="true" style="color:white"></i></a></li>
             <li><a href="#Projects" class="tooltip-toggle" title="Projects"><i class="fas fa-laptop-code" aria-hidden="true" style="color:white"></i></a></li>
             <li><a href="#Skills" class="tooltip-toggle" title="Skills"><i class="fas fa-tools" aria-hidden="true" style="color:white"></i></a></li>
             <li><a href="#Experience" class="tooltip-toggle" title="Experience"><i class="fas fa-briefcase" aria-hidden="true" style="color:white"></i></a></li>
@@ -351,10 +371,12 @@
             <img src="{% static 'Shreya modified pic.jpeg' %}" height="280" width="200"/>
             </br>
             </br>
+            <span><h5>Hello World!</h5>
             <p style="color:black">I am a graduate student at Stevens Institute of Technology majoring in Computer Science. My undergraduate studies help me build a strong foundation in the field of Information Technology.Before going for masters, I wanted to put my knowledge to test so I gained two years of experience working as a Systems Engineer at Tata Consultancy Services Ltd. I always wanted to raise my understanding of the nuances of the Computer Science field and can safely say that my study at stevens has helped me gained quantum of knowledge in this domain can safely say that my study at stevens has helped me gained quantum of knowledge in this domain.</p>
-            <ul class="main-nav">
+            </span>
+                <ul class="main-nav">
                 <li><a href="mailto:svhadadi@stevens.edu" target="_blank"><i class="fa fa-envelope-o" style="font-size:35px;color:#6C0C03"></i></a></li>
-                <li><a href="{% static 'Shreya Vhadadi_Resume_CF.pdf'%}" c><i class="far fa-file-alt" style="font-size:37px;color:#6C0C03"></i></a></li>
+                <li><a href="{% static 'Shreya Vhadadi_Resume_CF.pdf'%}" target="_blank"><i class="far fa-file-alt" style="font-size:37px;color:#6C0C03"></i></a></li>
             </ul>
             </br>
             </br>
@@ -537,7 +559,7 @@
                                 <p><i class="fas fa-long-arrow-alt-right"> Determined test cases for automation and prepared automation scripts in UFT and Selenium</i></p>
                                 <p><i class="fas fa-long-arrow-alt-right"> Developed methods for repeating steps along with performing regression testing on new software releases</i></p>
                                 <p><i class="fas fa-long-arrow-alt-right"> Created test plans, test cases and test scripts for projects</i></p>
-                                <p><i class="fas fa-long-arrow-alt-right"> Acquainted to Agile development environment</i></p>
+                                <p><i class="fas fa-long-arrow-alt-right"> Acquainted with Agile development environment</i></p>
                                 <div class="A">
                                 </div>
                             </div>
@@ -593,7 +615,7 @@
     </div>
 </section>
 <section>
-    <div class="jumbotron text-center" style="background: white" id="Contact">
+    <div class="jumbotron" style="background: white" id="Contact">
         <div class="container text-center" >
 
 
@@ -611,21 +633,21 @@
                     <div class="form-row">
                         <div class="form-group col-sm-6">
                             <label for="username"></label>
-                            <input type="text" class="form-control" name="username" id="username" placeholder="Name">
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Name" required>
                         </div>
                         <div class="form-group col-sm-6">
                             <label for="email"></label>
-                            <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Email" required>
                         </div>
                     </div>
                     <div class="form-group col-sm-13">
                         <label for="subject"></label>
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group col-sm-13">
 
                         <label for="message"></label>
-                        <textarea class="form-control" name="message" id="message" maxlength="800" rows="6" placeholder="Message"></textarea>
+                        <textarea class="form-control" data-gramm_editor="false" aria-invalid="false" name="message" id="message" maxlength="1500" rows="7" placeholder="Message" required></textarea>
                     </div>
                     </br>
                     <!--button type="submit" class="btn btn-outline-dark">Submit</button-->
@@ -670,7 +692,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
 <!--script>
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
@@ -694,6 +716,9 @@
                 "body").style.visibility = "visible";
         }
     };
+
+
+
 </script>
 
 </body>
