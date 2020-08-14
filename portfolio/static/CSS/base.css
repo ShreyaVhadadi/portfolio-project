@@ -1,0 +1,277 @@
+#loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #6C0C03;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+body{
+    line-height:1.6;
+    height:100vh;
+}
+.responsive {
+    width: 100%;
+    height:300px;
+}
+
+.form{
+    margin: 25px 0px 75px 50px;
+}
+
+
+.education{
+    margin: 25px 0px 75px 70px;
+}
+
+.experience{
+    margin: 25px 0px 75px 70px;
+}
+.projects{
+    margin: 25px 0px 70px 70px;
+}
+.skills{
+    margin: 25px 0px 70px 70px;
+}
+.home{
+    margin: 25px 0px 70px 70px;
+}
+.contact{
+    margin: 25px 0px 70px 70px;
+}
+.copyright{
+    margin: 25px 0px 70px 70px;
+}
+.A{
+    text-align: left;
+}
+.B{
+    text-align: left;
+}
+.home h1{
+    color: black;
+    font-family: "arial";
+    text-align:center;
+    font-size: 3em;
+    margin: 5px 0 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: animtext 4s steps(80, end);
+    animation-delay: 0.1s;
+    transition: all cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+.home img{
+    border-radius: 7px;
+    padding:1px;
+    border:1px solid #021a40;
+}
+.home img:hover{
+    border:2px solid black;
+}
+
+
+.home .main-nav a:hover{
+    opacity: 0.5;
+}
+.Sidebar-Icon a:hover, .Sidebar-Icon a.active{
+    opacity:0.6;
+}
+.progress:hover{
+    outline: 1px solid black;
+}
+
+@keyframes animtext {
+    from {
+        width: 0;
+        transition: all 2s ease-in-out;
+    }
+}
+
+
+.card {
+    perspective: 1000px;
+}
+.icon{
+    color:black;
+    padding: 10px;
+    font-size: 5px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+ul li .tooltip-toggle::before,
+.tooltip-toggle::after {
+    color: #efefef;
+    font-family: monospace;
+    font-size: 50px;
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+}
+ul li .tooltip-toggle:focus::before,
+.tooltip-toggle:focus::after
+.tooltip-toggle:hover::before,
+.tooltip-toggle:hover::after {
+    opacity: 1;
+    -webkit-transition: all 100ms ease;
+    transition: all 100ms ease;
+}
+
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateX(-180deg);
+}
+.flip-card-front, .flip-card-back {
+    backface-visibility: hidden;
+}
+.flip-card-back {
+    color: white;
+    transform: rotateX(180deg);
+    text-align: center;
+    padding-top:50px;
+    height:50px;
+}
+.button1{
+    background-color: white;
+    color: black;
+    border: 1px solid #555555;
+    width: 100px;
+}
+.button1:hover{
+    background-color: #6C0C03;
+    color: white;
+}
+.form-control:focus {
+    border-color: #6C0C03;
+    box-shadow: 0px 1px 1px rgba(129,6,6,1) inset, 0px 0px 8px rgba(129,6,6,1);
+}
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+textarea
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+@media (min-width: 600px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .home p {
+        font-size: 12px;
+    }
+    .home h1{
+        font-size: 25px;
+    }
+    .home h5{
+        font-size: 19px;
+    }
+    .home img{
+        width:170px;
+        border-radius: 50%;
+    }
+    .experience h4{
+        text-align: center;
+    }
+    .experience .period{
+        text-align: center;
+    }
+    .skills p{
+        text-align: center;
+    }
+
+
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    display:flex;
+    border-bottom:2px solid rgb(0,0,0);
+    padding-bottom:10px;
+    text-align:center;
+}
+
+.main-logo,
+.main-nav,
+.main-nav li{
+    display:inline;
+    padding: 5px 5px;
+    border-radius:5px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+.Sidebar {
+    position: fixed;
+    background-color: #15191C;
+    width:90px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 999;
+    -webkit-transition: left 300ms;
+    -o-transition: left 300ms;
+    transition: left 300ms;
+}
+.Sidebar-Icon .SDIcon {
+    color: #fff;
+}
+.Sidebar-Icon li {
+    list-style-type: none;
+    padding-bottom:80px;}
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+
+html{
+    scroll-behavior:smooth;
+}

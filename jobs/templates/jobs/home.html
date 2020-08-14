@@ -18,288 +18,10 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
+    <link rel="stylesheet" href="{% static 'CSS/base.css' %}"/>
     <link rel="icon" type="image/png"  href="{% static 'Logo3.png' %}" sizes="20x20">
 
-    <style>
-        #loader {
-            border: 12px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 12px solid #6C0C03;
-            width: 60px;
-            height: 60px;
-            -webkit-animation: spin 2s linear infinite;
-            animation: spin 1s linear infinite;
-        }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .center {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
-        body{
-            line-height:1.6;
-            height:100vh;
-        }
-        .responsive {
-            width: 100%;
-            height:300px;
-        }
-
-        .form{
-            margin: 25px 0px 75px 50px;
-        }
-
-
-        .education{
-            margin: 25px 0px 75px 70px;
-        }
-
-        .experience{
-            margin: 25px 0px 75px 70px;
-        }
-        .projects{
-            margin: 25px 0px 70px 70px;
-        }
-        .skills{
-            margin: 25px 0px 70px 70px;
-        }
-        .home{
-            margin: 25px 0px 70px 70px;
-        }
-        .contact{
-            margin: 25px 0px 70px 70px;
-        }
-        .copyright{
-            margin: 25px 0px 70px 70px;
-        }
-        .A{
-            text-align: left;
-        }
-        .B{
-            text-align: left;
-        }
-        .home h1{
-            color: black;
-            font-family: "arial";
-            text-align:center;
-            font-size: 3em;
-            margin: 5px 0 0 5px;
-            white-space: nowrap;
-            overflow: hidden;
-            width: 100%;
-            animation: animtext 4s steps(80, end);
-            animation-delay: 0.1s;
-            transition: all cubic-bezier(0.1, 0.7, 1.0, 0.1);
-        }
-        .home img{
-            border-radius: 7px;
-            padding:1px;
-            border:1px solid #021a40;
-        }
-        .home img:hover{
-            border:2px solid black;
-        }
-
-
-        .home .main-nav a:hover{
-            opacity: 0.5;
-        }
-        .Sidebar-Icon a:hover, .Sidebar-Icon a.active{
-            opacity:0.6;
-        }
-        .progress:hover{
-            outline: 1px solid black;
-        }
-
-        @keyframes animtext {
-            from {
-                width: 0;
-                transition: all 2s ease-in-out;
-            }
-        }
-
-
-        .card {
-            perspective: 1000px;
-        }
-        .icon{
-            color:black;
-            padding: 10px;
-            font-size: 5px;
-            width: 30px;
-            text-align: center;
-            text-decoration: none;
-            margin: 5px 2px;
-            border-radius: 50%;
-        }
-
-        ul li .tooltip-toggle::before,
-        .tooltip-toggle::after {
-            color: #efefef;
-            font-family: monospace;
-            font-size: 50px;
-            opacity: 0;
-            pointer-events: none;
-            text-align: center;
-        }
-        ul li .tooltip-toggle:focus::before,
-        .tooltip-toggle:focus::after
-        .tooltip-toggle:hover::before,
-        .tooltip-toggle:hover::after {
-            opacity: 1;
-            -webkit-transition: all 100ms ease;
-            transition: all 100ms ease;
-        }
-
-
-        .flip-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-
-        }
-
-        .flip-card:hover .flip-card-inner {
-            transform: rotateX(-180deg);
-        }
-        .flip-card-front, .flip-card-back {
-            backface-visibility: hidden;
-        }
-        .flip-card-back {
-            color: white;
-            transform: rotateX(180deg);
-            text-align: center;
-            padding-top:50px;
-            height:50px;
-        }
-        .button1{
-            background-color: white;
-            color: black;
-            border: 1px solid #555555;
-            width: 100px;
-        }
-        .button1:hover{
-            background-color: #6C0C03;
-            color: white;
-        }
-        .form-control:focus {
-            border-color: #6C0C03;
-            box-shadow: 0px 1px 1px rgba(129,6,6,1) inset, 0px 0px 8px rgba(129,6,6,1);
-        }
-
-
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        textarea
-        {
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-
-        @media (min-width: 600px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-
-        }
-        @media screen and (max-width: 600px) {
-            .home p {
-                font-size: 12px;
-            }
-            .home h1{
-                font-size: 25px;
-            }
-            .home h5{
-                font-size: 19px;
-            }
-            .home img{
-                width:170px;
-                border-radius: 50%;
-            }
-            .experience h4{
-                text-align: center;
-            }
-            .experience .period{
-                text-align: center;
-            }
-            .skills p{
-                text-align: center;
-            }
-
-
-        }
-
-        .navbar{
-            position:fixed;
-            top:0;
-            display:flex;
-            border-bottom:2px solid rgb(0,0,0);
-            padding-bottom:10px;
-            text-align:center;
-        }
-
-        .main-logo,
-        .main-nav,
-        .main-nav li{
-            display:inline;
-            padding: 5px 5px;
-            border-radius:5px;
-        }
-
-        html {
-            position: relative;
-            min-height: 100%;
-        }
-
-
-        .Sidebar {
-            position: fixed;
-            background-color: #15191C;
-            width:90px;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            overflow-y: auto;
-            z-index: 999;
-            -webkit-transition: left 300ms;
-            -o-transition: left 300ms;
-            transition: left 300ms;
-        }
-        .Sidebar-Icon .SDIcon {
-            color: #fff;
-        }
-        .Sidebar-Icon li {
-            list-style-type: none;
-            padding-bottom:80px;}
-        .no-js #loader { display: none;  }
-        .js #loader { display: block; position: absolute; left: 100px; top: 0; }
-
-        html{
-            scroll-behavior:smooth;
-        }
-
-    </style>
     <!-- Custom styles for this template -->
 
 </head>
@@ -372,7 +94,7 @@
             </br>
             </br>
             <h5><span style="color: #6C0C03; font-family:Geneva; font-size: 34px">"</span> Hello World! <span style="color: #6C0C03; font-family: Geneva; font-size: 34px">"</span></h5>
-            <p style="color:black">I am a graduate student at Stevens Institute of Technology majoring in Computer Science. My undergraduate studies helped me build a strong foundation in the field of Information Technology by strengthening my Object-Oriented Programming concepts.Logical problem-solving has always appealed to me, which is how my love for programming has evolved over the years. Before pursuing masters, I wanted to put my knowledge to test so I gained two years of experience working as a Systems Engineer at Tata Consultancy Services Ltd. I wanted to broaden my knowledge in the IT domain which led me to pursue my journey to Masters degree. So far, my coursework at Stevens has helped in comprehending the nuances involved in the field of Computer Science and I am optimistic that my academic journey will continue to assist me in procuring the knowledge required to increase my odds of a rewarding profession in software. This portfolio is a reflection of my creative and technical wizardry, in the domain of web development.</p>
+            <p style="color:black">I am a graduate student at Stevens Institute of Technology majoring in Computer Science. Logical problem-solving has always appealed to me, which is how my love for programming has evolved over the years. I have demonstrated my ability to meet the deadlines and apply technical skills to accomplish the deliverables in my extensive work experience as a Systems Engineer. I always wanted to optimize my understanding of the nuances involved in Computer Science and can safely say that my study at Stevens has helped me comprehend quantum of knowledge in this domain. This portfolio reflects my creative and technical wizardry, in the field of web development.</p>
                 <ul class="main-nav">
                 <li><a href="mailto:svhadadi@stevens.edu" target="_blank"><i class="fa fa-envelope-o" style="font-size:35px;color:#6C0C03"></i></a></li>
                 <li><a href="{% static 'Shreya Vhadadi_Resume_General_final.pdf'%}" target="_blank"><i class="far fa-file-alt" style="font-size:37px;color:#6C0C03"></i></a></li>
@@ -527,6 +249,7 @@
             <br>
             <div class="card mb-10">
                 <div class="card-body">
+                    <br>
                     <div class ="row">
 
                         <div class="col-sm-3">
@@ -536,7 +259,7 @@
                         <div class="col-sm-8">
                             <div class="A">
                                 <h4 class="card-title">Software Engineer Intern</h4>
-                                <p class="small period">WHATSBUSY | Jun 2020 - present</p>
+                                <p class="small period">WHATSBUSY INC | Jun 2020 - present</p>
                                 <p><i class="fas fa-long-arrow-alt-right"> Involved in performing code refactoring in Django for Automation</i></p>
                                 <p><i class="fas fa-long-arrow-alt-right"> Exposed to marketing, strategy, and business development at senior levels</i></p>
                                 <p><i class="fas fa-long-arrow-alt-right"> Collaborated with the founding team to ensure quality and performance of the web application by pareto analysis</i></p>
@@ -544,6 +267,7 @@
                         </div>
                     </div>
                     <hr>
+                    <br>
                     <div class ="row">
 
                         <div class="col-sm-3">
@@ -553,7 +277,7 @@
                         <div class="col-sm-8">
                             <div class="B">
                                 <h4 class="card-title">Systems Engineer</h4>
-                                <p class="small period">TATA CONSULTANCY SERVICES | Jan 2017 - Feb 2019</p>
+                                <p class="small period">TATA CONSULTANCY SERVICES LTD | Jan 2017 - Feb 2019</p>
                                 <p><i class="fas fa-long-arrow-alt-right"> Troubleshot change request related issues for the Core Banking Application</i></p>
                                 <p><i class="fas fa-long-arrow-alt-right"> Determined test cases for automation and prepared automation scripts in UFT and Selenium</i></p>
                                 <p><i class="fas fa-long-arrow-alt-right"> Developed methods for repeating steps along with performing regression testing on new software releases</i></p>
